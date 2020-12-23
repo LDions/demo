@@ -1,7 +1,7 @@
 package com.hzy.mydemo.security;
 
 import com.hzy.mydemo.domain.User;
-import com.hzy.mydemo.repository.UserRepository;
+import com.hzy.mydemo.modules.sys.repository.UserRepository;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

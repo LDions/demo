@@ -1,7 +1,7 @@
 package com.hzy.mydemo.config.audit;
 
-import com.hzy.mydemo.domain.PersistentAuditEvent;
 
+import com.hzy.mydemo.modules.sys.domain.PersistentAuditEvent;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Component;
