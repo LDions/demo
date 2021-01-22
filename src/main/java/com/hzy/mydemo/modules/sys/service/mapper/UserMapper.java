@@ -1,7 +1,7 @@
 package com.hzy.mydemo.modules.sys.service.mapper;
 
-import com.hzy.mydemo.domain.Authority;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.sys.domain.Authority;
+import com.hzy.mydemo.modules.sys.domain.User;
 import com.hzy.mydemo.modules.sys.service.dto.UserDTO;
 
 import org.springframework.stereotype.Service;
@@ -9,12 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Mapper for the entity {@link User} and its DTO called {@link UserDTO}.
- *
- * Normal mappers are generated using MapStruct, this one is hand-coded as MapStruct
- * support is still in beta, and requires a manual step with an IDE.
- */
 @Service
 public class UserMapper {
 
