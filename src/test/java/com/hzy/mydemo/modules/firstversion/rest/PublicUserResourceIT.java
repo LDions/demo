@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest;
+package com.hzy.mydemo.modules.firstversion.rest;
 
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasItems;
@@ -6,7 +6,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.hzy.mydemo.IntegrationTest;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.repository.UserRepository;
 import com.hzy.mydemo.security.AuthoritiesConstants;
 import javax.persistence.EntityManager;

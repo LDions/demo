@@ -1,6 +1,6 @@
 package com.hzy.mydemo.repository;
 
-import com.hzy.mydemo.domain.Authority;
+import com.hzy.mydemo.modules.firstversion.domain.Authority;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -1,6 +1,6 @@
 package com.hzy.mydemo.security;
 
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.repository.UserRepository;
 import java.util.*;
 import java.util.stream.Collectors;

@@ -2,7 +2,7 @@ package com.hzy.mydemo.service.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.service.dto.AdminUserDTO;
 import com.hzy.mydemo.service.dto.UserDTO;
 import java.util.ArrayList;

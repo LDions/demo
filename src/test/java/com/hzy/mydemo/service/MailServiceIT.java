@@ -6,7 +6,7 @@ import static org.mockito.Mockito.*;
 
 import com.hzy.mydemo.IntegrationTest;
 import com.hzy.mydemo.config.Constants;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;

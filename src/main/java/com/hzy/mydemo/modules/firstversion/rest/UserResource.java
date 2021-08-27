@@ -1,15 +1,15 @@
-package com.hzy.mydemo.web.rest;
+package com.hzy.mydemo.modules.firstversion.rest;
 
 import com.hzy.mydemo.config.Constants;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
+import com.hzy.mydemo.modules.firstversion.rest.errors.BadRequestAlertException;
+import com.hzy.mydemo.modules.firstversion.rest.errors.EmailAlreadyUsedException;
+import com.hzy.mydemo.modules.firstversion.rest.errors.LoginAlreadyUsedException;
 import com.hzy.mydemo.repository.UserRepository;
 import com.hzy.mydemo.security.AuthoritiesConstants;
 import com.hzy.mydemo.service.MailService;
 import com.hzy.mydemo.service.UserService;
 import com.hzy.mydemo.service.dto.AdminUserDTO;
-import com.hzy.mydemo.web.rest.errors.BadRequestAlertException;
-import com.hzy.mydemo.web.rest.errors.EmailAlreadyUsedException;
-import com.hzy.mydemo.web.rest.errors.LoginAlreadyUsedException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;

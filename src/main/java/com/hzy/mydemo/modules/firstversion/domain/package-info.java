@@ -1,4 +1,4 @@
 /**
  * JPA domain objects.
  */
-package com.hzy.mydemo.domain;
+package com.hzy.mydemo.modules.firstversion.domain;

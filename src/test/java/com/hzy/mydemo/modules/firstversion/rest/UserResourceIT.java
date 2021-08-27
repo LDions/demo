@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest;
+package com.hzy.mydemo.modules.firstversion.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -7,14 +7,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.hzy.mydemo.IntegrationTest;
-import com.hzy.mydemo.domain.Authority;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.Authority;
+import com.hzy.mydemo.modules.firstversion.domain.User;
+import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
 import com.hzy.mydemo.repository.UserRepository;
 import com.hzy.mydemo.security.AuthoritiesConstants;
 import com.hzy.mydemo.service.dto.AdminUserDTO;
-import com.hzy.mydemo.service.dto.UserDTO;
 import com.hzy.mydemo.service.mapper.UserMapper;
-import com.hzy.mydemo.web.rest.vm.ManagedUserVM;
 import java.time.Instant;
 import java.util.*;
 import java.util.function.Consumer;

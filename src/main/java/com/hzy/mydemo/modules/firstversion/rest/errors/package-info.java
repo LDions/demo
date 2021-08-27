@@ -3,4 +3,4 @@
  *
  * More information on https://github.com/zalando/problem-spring-web
  */
-package com.hzy.mydemo.web.rest.errors;
+package com.hzy.mydemo.modules.firstversion.rest.errors;

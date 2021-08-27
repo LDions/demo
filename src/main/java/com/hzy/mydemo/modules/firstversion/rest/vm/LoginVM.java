@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest.vm;
+package com.hzy.mydemo.modules.firstversion.rest.vm;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

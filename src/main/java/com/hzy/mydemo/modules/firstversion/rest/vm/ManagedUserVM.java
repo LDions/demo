@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest.vm;
+package com.hzy.mydemo.modules.firstversion.rest.vm;
 
 import com.hzy.mydemo.service.dto.AdminUserDTO;
 import javax.validation.constraints.Size;

@@ -1,8 +1,8 @@
 package com.hzy.mydemo.service.dto;
 
 import com.hzy.mydemo.config.Constants;
-import com.hzy.mydemo.domain.Authority;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.Authority;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import java.time.Instant;
 import java.util.Set;
 import java.util.stream.Collectors;

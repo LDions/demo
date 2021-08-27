@@ -1,6 +1,6 @@
 package com.hzy.mydemo.repository;
 
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;

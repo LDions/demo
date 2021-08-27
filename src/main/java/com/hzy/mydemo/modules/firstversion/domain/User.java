@@ -1,4 +1,4 @@
-package com.hzy.mydemo.domain;
+package com.hzy.mydemo.modules.firstversion.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hzy.mydemo.config.Constants;

@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest;
+package com.hzy.mydemo.modules.firstversion.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

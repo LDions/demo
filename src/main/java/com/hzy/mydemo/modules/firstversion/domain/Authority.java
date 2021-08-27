@@ -1,4 +1,4 @@
-package com.hzy.mydemo.domain;
+package com.hzy.mydemo.modules.firstversion.domain;
 
 import java.io.Serializable;
 import java.util.Objects;

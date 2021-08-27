@@ -1,6 +1,6 @@
 package com.hzy.mydemo.service.dto;
 
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 
 /**
  * A DTO representing a user, with only the public attributes.

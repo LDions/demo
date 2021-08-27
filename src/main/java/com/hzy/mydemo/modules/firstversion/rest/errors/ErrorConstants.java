@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest.errors;
+package com.hzy.mydemo.modules.firstversion.rest.errors;
 
 import java.net.URI;
 

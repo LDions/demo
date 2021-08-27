@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest;
+package com.hzy.mydemo.modules.firstversion.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

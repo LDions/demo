@@ -1,8 +1,8 @@
 package com.hzy.mydemo.service;
 
 import com.hzy.mydemo.config.Constants;
-import com.hzy.mydemo.domain.Authority;
-import com.hzy.mydemo.domain.User;
+import com.hzy.mydemo.modules.firstversion.domain.Authority;
+import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.repository.AuthorityRepository;
 import com.hzy.mydemo.repository.UserRepository;
 import com.hzy.mydemo.security.AuthoritiesConstants;

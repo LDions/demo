@@ -1,4 +1,4 @@
-package com.hzy.mydemo.web.rest.vm;
+package com.hzy.mydemo.modules.firstversion.rest.vm;
 
 /**
  * View Model object for storing the user's key and password.
