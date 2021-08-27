@@ -7,13 +7,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.hzy.mydemo.IntegrationTest;
+import com.hzy.mydemo.modules.core.security.AuthoritiesConstants;
 import com.hzy.mydemo.modules.firstversion.domain.Authority;
 import com.hzy.mydemo.modules.firstversion.domain.User;
+import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
-import com.hzy.mydemo.repository.UserRepository;
-import com.hzy.mydemo.security.AuthoritiesConstants;
-import com.hzy.mydemo.service.dto.AdminUserDTO;
-import com.hzy.mydemo.service.mapper.UserMapper;
+import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;
+import com.hzy.mydemo.modules.firstversion.service.mapper.UserMapper;
 import java.time.Instant;
 import java.util.*;
 import java.util.function.Consumer;

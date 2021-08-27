@@ -7,15 +7,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.hzy.mydemo.IntegrationTest;
 import com.hzy.mydemo.config.Constants;
+import com.hzy.mydemo.modules.core.security.AuthoritiesConstants;
 import com.hzy.mydemo.modules.firstversion.domain.User;
+import com.hzy.mydemo.modules.firstversion.repository.AuthorityRepository;
+import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import com.hzy.mydemo.modules.firstversion.rest.vm.KeyAndPasswordVM;
 import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
-import com.hzy.mydemo.repository.AuthorityRepository;
-import com.hzy.mydemo.repository.UserRepository;
-import com.hzy.mydemo.security.AuthoritiesConstants;
-import com.hzy.mydemo.service.UserService;
-import com.hzy.mydemo.service.dto.AdminUserDTO;
-import com.hzy.mydemo.service.dto.PasswordChangeDTO;
+import com.hzy.mydemo.modules.firstversion.service.UserService;
+import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;
+import com.hzy.mydemo.modules.firstversion.service.dto.PasswordChangeDTO;
 import java.time.Instant;
 import java.util.*;
 import org.apache.commons.lang3.RandomStringUtils;

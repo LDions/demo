@@ -1,15 +1,15 @@
 package com.hzy.mydemo.modules.firstversion.rest;
 
+import com.hzy.mydemo.modules.core.security.SecurityUtils;
 import com.hzy.mydemo.modules.firstversion.domain.User;
+import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import com.hzy.mydemo.modules.firstversion.rest.errors.*;
 import com.hzy.mydemo.modules.firstversion.rest.vm.KeyAndPasswordVM;
 import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
-import com.hzy.mydemo.repository.UserRepository;
-import com.hzy.mydemo.security.SecurityUtils;
-import com.hzy.mydemo.service.MailService;
-import com.hzy.mydemo.service.UserService;
-import com.hzy.mydemo.service.dto.AdminUserDTO;
-import com.hzy.mydemo.service.dto.PasswordChangeDTO;
+import com.hzy.mydemo.modules.firstversion.service.MailService;
+import com.hzy.mydemo.modules.firstversion.service.UserService;
+import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;
+import com.hzy.mydemo.modules.firstversion.service.dto.PasswordChangeDTO;
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;

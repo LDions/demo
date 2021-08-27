@@ -17,9 +17,9 @@ class ArchTest {
 
         noClasses()
             .that()
-            .resideInAnyPackage("com.hzy.mydemo.service..")
+            .resideInAnyPackage("com.hzy.mydemo.modules.firstversion.service..")
             .or()
-            .resideInAnyPackage("com.hzy.mydemo.repository..")
+            .resideInAnyPackage("com.hzy.mydemo.modules.firstversion.repository..")
             .should()
             .dependOnClassesThat()
             .resideInAnyPackage("..com.hzy.mydemo.web..")

@@ -1,7 +1,7 @@
 package com.hzy.mydemo.modules.firstversion.rest;
 
-import com.hzy.mydemo.service.UserService;
-import com.hzy.mydemo.service.dto.UserDTO;
+import com.hzy.mydemo.modules.firstversion.service.UserService;
+import com.hzy.mydemo.modules.firstversion.service.dto.UserDTO;
 import java.util.*;
 import java.util.Collections;
 import org.slf4j.Logger;

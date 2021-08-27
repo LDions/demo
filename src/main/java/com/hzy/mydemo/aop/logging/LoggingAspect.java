@@ -43,8 +43,8 @@ public class LoggingAspect {
      * Pointcut that matches all Spring beans in the application's main packages.
      */
     @Pointcut(
-        "within(com.hzy.mydemo.repository..*)" +
-        " || within(com.hzy.mydemo.service..*)" +
+        "within(com.hzy.mydemo.modules.firstversion.repository..*)" +
+        " || within(com.hzy.mydemo.modules.firstversion.service..*)" +
         " || within(com.hzy.mydemo.modules.firstversion.rest..*)"
     )
     public void applicationPackagePointcut() {

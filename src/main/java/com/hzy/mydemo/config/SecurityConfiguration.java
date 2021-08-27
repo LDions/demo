@@ -1,7 +1,7 @@
 package com.hzy.mydemo.config;
 
-import com.hzy.mydemo.security.*;
-import com.hzy.mydemo.security.jwt.*;
+import com.hzy.mydemo.modules.core.security.*;
+import com.hzy.mydemo.modules.core.security.jwt.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpMethod;

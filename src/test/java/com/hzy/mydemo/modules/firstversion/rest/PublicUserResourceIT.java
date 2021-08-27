@@ -6,9 +6,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.hzy.mydemo.IntegrationTest;
+import com.hzy.mydemo.modules.core.security.AuthoritiesConstants;
 import com.hzy.mydemo.modules.firstversion.domain.User;
-import com.hzy.mydemo.repository.UserRepository;
-import com.hzy.mydemo.security.AuthoritiesConstants;
+import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import javax.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
