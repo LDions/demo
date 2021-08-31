@@ -19,6 +19,11 @@ logging:
     tech.jhipster: DEBUG #日志级别从低到高：trace<debug<info<warn<error<fatal,若设置为warn，则低于warn的信息不会输出
     org.hibernate.SQL: DEBUG
     com.hzy.mydemo: DEBUG
+#  pattern:
+#    console: "%d - %msg%n" #格式化，只输出日期和内容
+#  file:
+#    path: C:\data\projects    #配置除控制台输出之外的日志文件路径（只能是路径，没有文件夹则自动创建文件夹，没有文件名，使用缺省值spring.log）
+#    name:    #指定日志文件的名字（有路径，有文件名，path和name只能存在一个，默认情况下日志文件的大小达到10MB时会切分一次）
 
 spring:
   devtools:
