@@ -17,7 +17,7 @@ plugins {
     id "com.google.cloud.tools.jib"
     id "com.gorylenko.gradle-git-properties"
     id "com.github.node-gradle.node"
-    id "org.liquibase.gradle"
+//    id "org.liquibase.gradle"
     id "org.sonarqube"
     id "io.spring.nohttp"
     //jhipster-needle-gradle-plugins - JHipster will add additional gradle plugins here
@@ -132,33 +132,33 @@ if (!project.hasProperty("runList")) {
 
 project.ext.diffChangelogFile = "src/main/resources/config/liquibase/changelog/" + new Date().format("yyyyMMddHHmmss") + "_changelog.xml"
 
-liquibase {
-    activities {
-        main {
-            driver "com.mysql.cj.jdbc.Driver"
-            url "jdbc:mysql://localhost:3306/demo"
-            username "root"
-            password ""
-            changeLogFile "src/main/resources/config/liquibase/master.xml"
-            defaultSchemaName "demo"
-            logLevel "debug"
-            classpath "src/main/resources/"
-        }
-        diffLog {
-            driver "com.mysql.cj.jdbc.Driver"
-            url "jdbc:mysql://localhost:3306/demo"
-            username "root"
-            password ""
-            changeLogFile project.ext.diffChangelogFile
-            referenceUrl "hibernate:spring:com.hzy.mydemo.modules.firstversion.domain?dialect=org.hibernate.dialect.MySQL8Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
-            defaultSchemaName "demo"
-            logLevel "debug"
-            classpath "$buildDir/classes/java/main"
-        }
-    }
-
-    runList = project.ext.runList
-}
+//liquibase {
+//    activities {
+//        main {
+//            driver "com.mysql.cj.jdbc.Driver"
+//            url "jdbc:mysql://localhost:3306/demo"
+//            username "root"
+//            password ""
+//            changeLogFile "src/main/resources/config/liquibase/master.xml"
+//            defaultSchemaName "demo"
+//            logLevel "debug"
+//            classpath "src/main/resources/"
+//        }
+//        diffLog {
+//            driver "com.mysql.cj.jdbc.Driver"
+//            url "jdbc:mysql://localhost:3306/demo"
+//            username "root"
+//            password ""
+//            changeLogFile project.ext.diffChangelogFile
+//            referenceUrl "hibernate:spring:com.hzy.mydemo.modules.firstversion.domain?dialect=org.hibernate.dialect.MySQL8Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+//            defaultSchemaName "demo"
+//            logLevel "debug"
+//            classpath "$buildDir/classes/java/main"
+//        }
+//    }
+//
+//    runList = project.ext.runList
+//}
 
 gitProperties {
     failOnNoGitDirectory = false
@@ -219,10 +219,10 @@ dependencies {
     implementation "org.ehcache:ehcache"
     implementation "org.hibernate:hibernate-entitymanager"
     implementation "org.hibernate.validator:hibernate-validator"
-    implementation "org.liquibase:liquibase-core"
-    liquibaseRuntime "org.liquibase:liquibase-core"
-    liquibaseRuntime "org.liquibase.ext:liquibase-hibernate5:${liquibaseHibernate5Version}"
-    liquibaseRuntime sourceSets.main.compileClasspath
+//    implementation "org.liquibase:liquibase-core"
+//    liquibaseRuntime "org.liquibase:liquibase-core"
+//    liquibaseRuntime "org.liquibase.ext:liquibase-hibernate5:${liquibaseHibernate5Version}"
+//    liquibaseRuntime sourceSets.main.compileClasspath
     implementation "org.springframework.boot:spring-boot-loader-tools"
     implementation "org.springframework.boot:spring-boot-starter-mail"
     implementation "org.springframework.boot:spring-boot-starter-logging"
@@ -252,7 +252,7 @@ dependencies {
     implementation ("io.springfox:springfox-swagger2")
     implementation "io.springfox:springfox-bean-validators"
     implementation "mysql:mysql-connector-java"
-    liquibaseRuntime "mysql:mysql-connector-java"
+//    liquibaseRuntime "mysql:mysql-connector-java"
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
     annotationProcessor "org.hibernate:hibernate-jpamodelgen:${hibernateVersion}"
