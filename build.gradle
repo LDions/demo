@@ -225,9 +225,10 @@ dependencies {
 //    liquibaseRuntime sourceSets.main.compileClasspath
     implementation "org.springframework.boot:spring-boot-loader-tools"
     implementation "org.springframework.boot:spring-boot-starter-mail"
-    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation "org.springframework.boot:spring-boot-starter-logging" //日志依赖，一般不用直接添加，spring-boot-starter中其中就包含了这个，该依赖的内容就是spring boot默认的日志框架
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    implementation 'org.projectlombok:lombok:1.18.18'  //@Slf4j注解导入
     testImplementation "org.testcontainers:mysql"
     implementation "org.springframework.boot:spring-boot-starter-security"
     implementation ("org.springframework.boot:spring-boot-starter-web") {

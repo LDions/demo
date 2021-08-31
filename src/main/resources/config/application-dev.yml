@@ -15,8 +15,8 @@
 
 logging:
   level:
-    ROOT: DEBUG
-    tech.jhipster: DEBUG
+    ROOT: DEBUG #日志级别：info，debug,error,trace,fatal,warn,off
+    tech.jhipster: DEBUG #日志级别从低到高：trace<debug<info<warn<error<fatal,若设置为warn，则低于warn的信息不会输出
     org.hibernate.SQL: DEBUG
     com.hzy.mydemo: DEBUG
 

@@ -13,6 +13,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.CacheManager;
@@ -27,11 +28,13 @@ import tech.jhipster.security.RandomUtil;
 /**
  * Service class for managing users.
  */
+@Slf4j //使用该注解，可直接使用log变量
 @Service
 @Transactional
 public class UserService {
 
-    private final Logger log = LoggerFactory.getLogger(UserService.class);
+    //加了@Slf4j这个注解，不需要每次都写这行代码
+    //    private final Logger log = LoggerFactory.getLogger(UserService.class);
 
     private final UserRepository userRepository;
 

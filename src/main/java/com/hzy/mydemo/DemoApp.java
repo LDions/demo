@@ -65,7 +65,7 @@ public class DemoApp {
      */
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DemoApp.class);
-        DefaultProfileUtil.addDefaultProfile(app);
+        DefaultProfileUtil.addDefaultProfile(app); //此处已将.yml文件加进应用中
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
     }
