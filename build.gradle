@@ -7,7 +7,7 @@ buildscript {
     }
 }
 
-plugins {
+plugins { //插件配置；格式为id «plugin id» version «plugin version» [apply «false»] Gradle的核心插件只需提供id的简称就可以
     id "java"
     id "maven-publish"
     id "idea"
@@ -28,7 +28,7 @@ version = "0.0.1-SNAPSHOT"
 
 description = ""
 
-sourceCompatibility=8 //选择的JDK是11，本地电脑只有8，不兼容，改成为本地支持的
+sourceCompatibility=8 //指定编译.java文件的jdk版本，选择的JDK是11，本地电脑只有8，不兼容，改成为本地支持的
 targetCompatibility=8
 assert System.properties["java.specification.version"] == "1.8" || "1.9" || "10" || "11" || "12" || "13" || "14" || "15"
 
@@ -186,13 +186,13 @@ configurations {
     }
 }
 
-repositories {
+repositories { //仓库配置，mavenCentral()代表中央仓库，你也可以用maven{url ‘<url>’}的方式添加一个仓库
     mavenLocal()
     mavenCentral()
     //jhipster-needle-gradle-repositories - JHipster will add additional repositories
 }
 
-dependencies {
+dependencies { //依赖的坐标集合
     // import JHipster dependencies BOM
     if (!project.hasProperty("gae")) {
         implementation platform("tech.jhipster:jhipster-dependencies:${jhipsterDependenciesVersion}")
@@ -229,6 +229,11 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation 'org.projectlombok:lombok:1.18.18'  //@Slf4j注解导入
+//    implementation(group: 'org.projectlombok', name: 'lombok', version: '1.18.16')  这种格式应该是完整的写法
+//    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.16' 两种方式都可以，最好是上一种，compile方式被弃用了
+    annotationProcessor('org.projectlombok:lombok:1.18.16')  //加了这句lombok中的@Data,@Slf4j等注解才好使，build的时候不会出现找不到符号
+    implementation(group: 'com.alibaba', name: 'fastjson', version: '1.2.75')
+//    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
     testImplementation "org.testcontainers:mysql"
     implementation "org.springframework.boot:spring-boot-starter-security"
     implementation ("org.springframework.boot:spring-boot-starter-web") {
@@ -298,3 +303,19 @@ if (project.hasProperty("nodeInstall")) {
 }
 compileJava.dependsOn processResources
 processResources.dependsOn bootBuildInfo
+
+//compileJava {
+//    //配置编译时生成代码的目录
+//    options.compilerArgs << "-s"
+//    options.compilerArgs << "$projectDir/src/main/generated/java"
+//    //确保文件夹存在
+//    doFirst {
+//        file(new File(projectDir, "/src/main/generated/java")).mkdirs()
+//    }
+//}
+////在clean时删除编译生成的代码
+//clean.doLast {
+//    // clean-up directory when necessary
+//    file(new File(projectDir, "/src/main/generated")).deleteDir()
+//}
+
