@@ -1,4 +1,4 @@
-
+//用于多模块的配置
 pluginManagement {
     repositories {
         maven { url 'https://repo.spring.io/milestone' }

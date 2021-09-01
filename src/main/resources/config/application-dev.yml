@@ -28,13 +28,14 @@ logging:
 spring:
   devtools:
     restart:
-      enabled: true
-      additional-exclude: static/**
+      enabled: true #开启热部署，默认监听classpath路径下的文件更改，devtools只适用于开发环境，线上环境不可开启，打包时不将devtools打包到jar包中
+      #      exclude:  #设置哪些资源变动后不触发热部署，会覆盖默认的exclude内容 （资源不会触发重启，但会触发实时重新加载）
+      additional-exclude: static/** #，若想保留exclude的默认值（情况下）添加其他的排除项
     livereload:
-      enabled: false # we use Webpack dev server + BrowserSync for livereload
-  jackson:
+      enabled: false # 实现网页实时刷新效果（需要安装livereload插件） we use Webpack dev server + BrowserSync for livereload
+  jackson: #jackson是用来序列化和反序列化json的
     serialization:
-      indent-output: true
+      indent-output: true #格式化输出
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
