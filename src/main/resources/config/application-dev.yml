@@ -26,6 +26,12 @@ logging:
 #    name:    #指定日志文件的名字（有路径，有文件名，path和name只能存在一个，默认情况下日志文件的大小达到10MB时会切分一次）
 
 spring:
+  #  profiles:
+  #    active: dev
+  #  config:
+  #    activate:
+  #      on-profile:
+  #        - dev        #激活配置，配置特定环境，不能与profiles.active（旧版）一起使用
   devtools:
     restart:
       enabled: true #开启热部署，默认监听classpath路径下的文件更改，devtools只适用于开发环境，线上环境不可开启，打包时不将devtools打包到jar包中

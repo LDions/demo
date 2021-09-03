@@ -200,6 +200,7 @@ dependencies { //依赖的坐标集合
 
     // Use ", version: jhipsterDependenciesVersion, changing: true" if you want
     // to use a SNAPSHOT release instead of a stable release
+    implementation 'io.github.jhipster:jhipster-framework:3.8.0'  //swagger配置文件用到
     implementation group: "tech.jhipster", name: "jhipster-framework"
     implementation "javax.annotation:javax.annotation-api"
     implementation "org.springframework.boot:spring-boot-starter-cache"
