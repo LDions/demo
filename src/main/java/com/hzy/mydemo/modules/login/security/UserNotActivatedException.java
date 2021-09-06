@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security;
+package com.hzy.mydemo.modules.login.security;
 
 import org.springframework.security.core.AuthenticationException;
 

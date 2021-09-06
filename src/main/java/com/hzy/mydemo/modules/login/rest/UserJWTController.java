@@ -1,9 +1,9 @@
-package com.hzy.mydemo.modules.firstversion.rest;
+package com.hzy.mydemo.modules.login.rest;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.hzy.mydemo.modules.core.security.jwt.JWTFilter;
-import com.hzy.mydemo.modules.core.security.jwt.TokenProvider;
 import com.hzy.mydemo.modules.firstversion.rest.vm.LoginVM;
+import com.hzy.mydemo.modules.login.security.jwt.JWTFilter;
+import com.hzy.mydemo.modules.login.security.jwt.TokenProvider;
 import javax.validation.Valid;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

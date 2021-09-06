@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security.jwt;
+package com.hzy.mydemo.modules.login.security.jwt;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

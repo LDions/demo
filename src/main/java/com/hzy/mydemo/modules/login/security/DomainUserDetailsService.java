@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security;
+package com.hzy.mydemo.modules.login.security;
 
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;

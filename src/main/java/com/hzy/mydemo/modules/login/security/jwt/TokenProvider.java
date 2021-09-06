@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security.jwt;
+package com.hzy.mydemo.modules.login.security.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
