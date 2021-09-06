@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security;
+package com.hzy.mydemo.modules.login.security;
 
 /**
  * Constants for Spring Security authorities.

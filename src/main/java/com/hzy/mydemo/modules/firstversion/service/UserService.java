@@ -1,21 +1,19 @@
 package com.hzy.mydemo.modules.firstversion.service;
 
 import com.hzy.mydemo.config.Constants;
-import com.hzy.mydemo.modules.core.security.AuthoritiesConstants;
-import com.hzy.mydemo.modules.core.security.SecurityUtils;
 import com.hzy.mydemo.modules.firstversion.domain.Authority;
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.AuthorityRepository;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;
 import com.hzy.mydemo.modules.firstversion.service.dto.UserDTO;
+import com.hzy.mydemo.modules.login.security.AuthoritiesConstants;
+import com.hzy.mydemo.modules.login.security.SecurityUtils;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.cache.CacheManager;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

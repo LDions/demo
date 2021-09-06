@@ -1,16 +1,18 @@
 package com.hzy.mydemo.modules.firstversion.rest;
 
-import com.hzy.mydemo.modules.core.security.SecurityUtils;
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
-import com.hzy.mydemo.modules.firstversion.rest.errors.*;
+import com.hzy.mydemo.modules.firstversion.rest.errors.EmailAlreadyUsedException;
+import com.hzy.mydemo.modules.firstversion.rest.errors.InvalidPasswordException;
+import com.hzy.mydemo.modules.firstversion.rest.errors.LoginAlreadyUsedException;
 import com.hzy.mydemo.modules.firstversion.rest.vm.KeyAndPasswordVM;
 import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
 import com.hzy.mydemo.modules.firstversion.service.MailService;
 import com.hzy.mydemo.modules.firstversion.service.UserService;
 import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;
 import com.hzy.mydemo.modules.firstversion.service.dto.PasswordChangeDTO;
-import java.util.*;
+import com.hzy.mydemo.modules.login.security.SecurityUtils;
+import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.apache.commons.lang3.StringUtils;

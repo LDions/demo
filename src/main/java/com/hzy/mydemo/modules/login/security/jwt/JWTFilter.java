@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.core.security.jwt;
+package com.hzy.mydemo.modules.login.security.jwt;
 
 import java.io.IOException;
 import javax.servlet.FilterChain;
