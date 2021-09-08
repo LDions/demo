@@ -20,7 +20,7 @@ import org.springframework.web.filter.CorsFilter;
 import org.zalando.problem.spring.web.advice.security.SecurityProblemSupport;
 import tech.jhipster.config.JHipsterProperties;
 
-@EnableWebSecurity
+@EnableWebSecurity //启用Spring Security的Web安全支持，并提供Spring MVC集成
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @Import(SecurityProblemSupport.class)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -61,6 +61,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers("/test/**");
     }
 
+    /*
+     *该方法定义了哪些路径应该被保护，哪些路径不需要保护
+     */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         // @formatter:off
