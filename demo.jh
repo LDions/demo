@@ -1,97 +1,81 @@
-entity Region {
-	regionName String
-}
-
-entity Country {
-	countryName String
-}
-
-// an ignored comment
-/** not an ignored comment */
-entity Location {
-	streetAddress String,
-	postalCode String,
-	city String,
-	stateProvince String
-}
-
-entity Department {
-	departmentName String required
-}
+/**
+ * 此文件定义好表结构 使用jhipster命令生成表：jhipster import-jdl ./XX.jh
+ */
 
 /**
- * Task entity.
- * @author The JHipster team.
+ * @note authority - 用户表
+ * @author
  */
-entity Task {
-	title String,
-	description String
+entity User{
+    createdBy          String maxlength(64) required          /** 创建人 */
+    createdTime        Instant required                       /** 创建时间 */
+    updatedBy          String maxlength(64)                   /** 更新人 */
+    updatedTime        Instant                                /** 更新时间 */
+    deleted            Boolean required                       /** 是否逻辑删除 */
+    name               String maxlength(128) required         /** 姓名 */
+    sex                String maxlength(32) required          /** 性别 */
+    password           String maxlength(512) required         /** 密码 */
+    state              String maxlength(32) required          /** 用户状态 0正常，1禁用 */
+    avatar             String maxlength(2000)                 /** 头像 */
+    resetCode          String maxlength(64)                   /** 重置码 */
+    resetTime          Instant                                /** 重置时间 */
+    userCode           String maxlength(64) required          /** 用户编码 */
+    phone              String maxlength(11) required          /** 手机号 */
+    activate           String maxlength(64)                   /** 激活码 */
+    email              String maxlength(320)                  /** 邮箱 */
 }
-
 /**
- * The Employee entity.
+ * @note authority - 账号表
+ * @author
  */
-entity Employee {
-	/**
-	* The firstname attribute.
-	*/
-	firstName String,
-	lastName String,
-	email String,
-	phoneNumber String,
-	hireDate Instant,
-	salary Long,
-	commissionPct Long
+entity Account{
+    createdBy          String maxlength(64) required          /** 创建人 */
+    createdTime        Instant required                       /** 创建时间 */
+    updatedBy          String maxlength(64)                   /** 更新人 */
+    updatedTime        Instant                                /** 更新时间 */
+    deleted            Boolean required                       /** 是否逻辑删除 */
+    categories         String maxlength(32) required          /** 账号类别 登录账号，手机号，微信，QQ */
+    code               String maxlength(64) required          /** 账号 */
+    userid             Long required                          /** 用户ID */
 }
-
-entity Job {
-	jobTitle String,
-	minSalary Long,
-	maxSalary Long
+/**
+ * @note authority - 角色表
+ * @author
+ */
+entity Role{
+    createdBy          String maxlength(64) required          /** 创建人 */
+    createdTime        Instant required                       /** 创建时间 */
+    updatedBy          String maxlength(64)                   /** 更新人 */
+    updatedTime        Instant                                /** 更新时间 */
+    deleted            Boolean required                       /** 是否逻辑删除 */
+    roleName           String maxlength(128) required         /** 角色名称 */
+    roleCode           String maxlength(64) required          /** 角色编码 */
+    status             String maxlength(32) required          /** 角色状态 正常，停用 */
+    inlay              Boolean required                       /** 是否为内置角色 */
 }
-
-entity JobHistory {
-	startDate Instant,
-	endDate Instant,
-	language Language
+/**
+ * @note authority - 权限表
+ * @author
+ */
+entity Authority{
+    authorityName      String maxlength(128) required         /** 权限名称 */
+    authorityKey       String maxlength(64)                   /** 权限键值 */
+    parentId           Long required                          /** 父级id */
+    authorityType      String maxlength(32) required          /** 权限类型 默认 */
 }
-
-enum Language {
-    FRENCH, ENGLISH, SPANISH
+/**
+ * @note authority - 用户-角色中间表
+ * @author
+ */
+entity UserRole{
+    userId             Long required                          /** 用户id */
+    roleId             Long required                          /** 角色id */
 }
-
-relationship OneToOne {
-	Country{region} to Region
-}
-
-relationship OneToOne {
-	Location{country} to Country
-}
-
-relationship OneToOne {
-	Department{location} to Location
-}
-
-relationship ManyToMany {
-	Job{task(title)} to Task{job}
-}
-relationship OneToMany {
-	Employee to Job{employee},
-	/**
-	* A relationship
-	*/
-	Department to
-	/**
-	* Another side of the same relationship
-	*/
-	Employee{department}
-}
-
-relationship ManyToOne {
-	Employee{manager} to Employee
-}
-relationship OneToOne {
-	JobHistory{job} to Job,
-	JobHistory{department} to Department,
-	JobHistory{employee} to Employee
+/**
+ * @note authority - 角色-权限中间表
+ * @author
+ */
+entity RoleAuthority{
+    roleId             Long required                          /** 角色id */
+    authorityId        Long required                          /** 权限id */
 }
