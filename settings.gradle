@@ -1,4 +1,6 @@
-//用于多模块的配置
+//用于多模块的配置   它其实是用于初始化以及工程树的配置的，放在根工程目录下
+//相当于我们在Android Studio看到的Project和Module概念一样。根工程相当于Android Studio的Project，一个根工程可以有很多自工程，
+// 也就是很多Module，这样就和Android Studio定义的Module概念对应上了。
 pluginManagement {
     repositories {
         maven { url 'https://repo.spring.io/milestone' }
