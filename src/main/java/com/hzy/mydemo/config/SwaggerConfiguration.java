@@ -52,15 +52,7 @@ public class SwaggerConfiguration { //配置swagger的启用配置文件，支�
             //            .groupName("初始化接口文档")
             .select()
             //            .apis(RequestHandlerSelectors.basePackage("com.hzy.mydemo.modules.firstversion.rest")) //添加路径选择条件
-            .apis(
-                basePackage(
-                    "com.hzy.mydemo.modules.login.rest" +
-                    SPLITOR +
-                    "com.hzy.mydemo.modules.basic.rest" +
-                    SPLITOR +
-                    "com.hzy.mydemo.modules.firstversion.rest"
-                )
-            )
+            .apis(basePackage("com.hzy.mydemo.modules.login.rest" + SPLITOR + "com.hzy.mydemo.modules.firstversion.rest"))
             .paths(PathSelectors.any()) //设置路径筛选
             .build()
             .pathMapping("/")
@@ -90,7 +82,7 @@ public class SwaggerConfiguration { //配置swagger的启用配置文件，支�
             .groupName("基础接口文档")
             .select()
             //            .apis(RequestHandlerSelectors.basePackage("com.hzy.mydemo.modules.test.rest")) //添加路径选择条件
-            .apis(basePackage("com.hzy.mydemo.modules.basic.web.rest"))
+            .apis(basePackage(HZY_PACKAGE))
             .paths(PathSelectors.any()) //设置路径筛选
             .build()
             .pathMapping("/");
