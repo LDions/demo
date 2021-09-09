@@ -297,7 +297,7 @@
           "chnname": "角色表"
         },
         {
-          "title": "Authority",
+          "title": "SysAuthority",
           "fields": [
             {
               "name": "id",
@@ -409,7 +409,7 @@
           "chnname": "权限表"
         },
         {
-          "title": "Account",
+          "title": "Accounts",
           "fields": [
             {
               "name": "id",
@@ -677,7 +677,7 @@
         "nodes": [
           {
             "shape": "table",
-            "title": "Account",
+            "title": "Accounts",
             "moduleName": false,
             "x": 190,
             "y": 120,
@@ -717,7 +717,7 @@
           },
           {
             "shape": "table",
-            "title": "Authority",
+            "title": "SysAuthority",
             "moduleName": false,
             "x": 1370,
             "y": 340,
@@ -725,29 +725,6 @@
           }
         ],
         "edges": [
-          {
-            "shape": "erdRelation",
-            "relation": "0,n:1",
-            "source": "4b696618",
-            "target": "ae41629d",
-            "id": "bd2d6510",
-            "controlPoints": [
-              {
-                "x": 358.9052734375,
-                "y": 212.94047619047618
-              },
-              {
-                "x": 270.5746237537435,
-                "y": 258
-              },
-              {
-                "x": 41.7607421875,
-                "y": 382.10135135135135
-              }
-            ],
-            "sourceAnchor": 17,
-            "targetAnchor": 0
-          },
           {
             "shape": "erdRelation",
             "relation": "0,n:1",
@@ -808,40 +785,10 @@
             ],
             "sourceAnchor": 1,
             "targetAnchor": 2
-          },
-          {
-            "shape": "erdRelation",
-            "relation": "0,n:1",
-            "source": "eb2d394d",
-            "target": "70a52b90",
-            "id": "02598f37",
-            "controlPoints": [
-              {
-                "x": 1203.7607421875,
-                "y": 272.17857142857144
-              },
-              {
-                "x": 1231.6982421875,
-                "y": 192.86111111111111
-              }
-            ],
-            "sourceAnchor": 0,
-            "targetAnchor": 5
           }
         ]
       },
       "associations": [
-        {
-          "relation": "0,n:1",
-          "from": {
-            "entity": "Account",
-            "field": "userId"
-          },
-          "to": {
-            "entity": "User",
-            "field": "id"
-          }
-        },
         {
           "relation": "0,n:1",
           "from": {
@@ -878,7 +825,7 @@
         {
           "relation": "0,n:1",
           "from": {
-            "entity": "Authority",
+            "entity": "SysAuthority",
             "field": "id"
           },
           "to": {

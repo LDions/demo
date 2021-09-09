@@ -20,7 +20,7 @@ entity User{
     resetCode          String maxlength(64)                   /** 重置码 */
     resetTime          Instant                                /** 重置时间 */
     userCode           String maxlength(64) required          /** 用户编码 */
-    phone              String maxlength(11) required          /** 手机号 */
+    phone              String maxlength(11)                   /** 手机号 */
     activate           String maxlength(64)                   /** 激活码 */
     email              String maxlength(320)                  /** 邮箱 */
 }
@@ -28,14 +28,16 @@ entity User{
  * @note authority - 账号表
  * @author
  */
-entity Account{
+entity Accounts{
     createdBy          String maxlength(64) required          /** 创建人 */
     createdTime        Instant required                       /** 创建时间 */
     updatedBy          String maxlength(64)                   /** 更新人 */
     updatedTime        Instant                                /** 更新时间 */
     deleted            Boolean required                       /** 是否逻辑删除 */
     categories         String maxlength(32) required          /** 账号类别 登录账号，手机号，微信，QQ */
-    code               String maxlength(64) required          /** 账号 */
+    code               String maxlength(64)                   /** 账号 */
+    openId             String maxlength(64) required          /** openid */
+    accessToken        String maxlength(64) required          /** token */
     userid             Long required                          /** 用户ID */
 }
 /**
@@ -57,7 +59,7 @@ entity Role{
  * @note authority - 权限表
  * @author
  */
-entity Authority{
+entity SysAuthority{
     authorityName      String maxlength(128) required         /** 权限名称 */
     authorityKey       String maxlength(64)                   /** 权限键值 */
     parentId           Long required                          /** 父级id */
