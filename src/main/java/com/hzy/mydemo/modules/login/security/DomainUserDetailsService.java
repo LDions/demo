@@ -4,6 +4,7 @@ import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import java.util.*;
 import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +20,8 @@ import org.springframework.transaction.annotation.Transactional;
  * Authenticate a user from the database.
  */
 @Component("userDetailsService")
+@Slf4j
 public class DomainUserDetailsService implements UserDetailsService {
-
-    private final Logger log = LoggerFactory.getLogger(DomainUserDetailsService.class);
 
     private final UserRepository userRepository;
 
@@ -29,11 +29,15 @@ public class DomainUserDetailsService implements UserDetailsService {
         this.userRepository = userRepository;
     }
 
+    /*
+     *在此处实现自定义登录逻辑
+     */
     @Override
     @Transactional
     public UserDetails loadUserByUsername(final String login) {
         log.debug("Authenticating {}", login);
 
+        //用户信息校验（邮箱校验）
         if (new EmailValidator().isValid(login, null)) {
             return userRepository
                 .findOneWithAuthoritiesByEmailIgnoreCase(login)
