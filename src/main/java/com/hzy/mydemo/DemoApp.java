@@ -76,7 +76,7 @@ public class DemoApp {
         String contextPath = Optional
             .ofNullable(env.getProperty("server.servlet.context-path"))
             .filter(StringUtils::isNotBlank)
-            .orElse("/");
+            .orElse("/doc.html"); //此处是在程序启动后加上动词.html Application 'demo' is running! Access URLs: Local: 		http://localhost:8080/doc.html External: 	http://192.168.1.194:8080/doc.html
         String hostAddress = "localhost";
         try {
             hostAddress = InetAddress.getLocalHost().getHostAddress();

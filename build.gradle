@@ -281,6 +281,9 @@ dependencies { //依赖的坐标集合
     // https://mvnrepository.com/artifact/cn.hutool/hutool-all
     implementation 'cn.hutool:hutool-all:5.7.9'  //Java工具类库
 
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation 'com.google.guava:guava:30.1.1-jre'
+
 }
 
 if (project.hasProperty("gae")) {
