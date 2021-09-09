@@ -1,0 +1,75 @@
+{
+  "name": "Role",
+  "fields": [
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String",
+      "javadoc": "创建人",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "createdTime",
+      "fieldType": "Instant",
+      "javadoc": "创建时间",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String",
+      "javadoc": "更新人",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "updatedTime",
+      "fieldType": "Instant",
+      "javadoc": "更新时间"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean",
+      "javadoc": "是否逻辑删除",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "roleName",
+      "fieldType": "String",
+      "javadoc": "角色名称",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "fieldName": "roleCode",
+      "fieldType": "String",
+      "javadoc": "角色编码",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "javadoc": "角色状态 正常，停用",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "32"
+    },
+    {
+      "fieldName": "inlay",
+      "fieldType": "Boolean",
+      "javadoc": "是否为内置角色",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "javadoc": "@note authority - 角色表\\n@author",
+  "entityTableName": "role",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210909035958"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "SysAuthority",
+  "fields": [
+    {
+      "fieldName": "authorityName",
+      "fieldType": "String",
+      "javadoc": "权限名称",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "fieldName": "authorityKey",
+      "fieldType": "String",
+      "javadoc": "权限键值",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "parentId",
+      "fieldType": "Long",
+      "javadoc": "父级id",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "authorityType",
+      "fieldType": "String",
+      "javadoc": "权限类型 默认",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "32"
+    }
+  ],
+  "relationships": [],
+  "javadoc": "@note authority - 权限表\\n@author",
+  "entityTableName": "sys_authority",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210909035959"
+}

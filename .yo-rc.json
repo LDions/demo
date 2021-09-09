@@ -41,6 +41,8 @@
     "jwtSecretKey": "ZWYzNWIzMGZkMTQ3OGI4YWZjODcxMTNmODJiMDVlMzdiZDJiZTBiMzAzZDdkMzkzNmEyOWQ2NTk2ODllM2RhYjUwMjQwY2YzMmZlZTlmMDVjMzllYWZiMzIyYzkxNDgwZjIzMTY3M2ExYTMwNzQ0MTEyZTRiMWY2Mjg2YTY4NDU=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["Accounts", "Role", "SysAuthority", "UserRole", "RoleAuthority"],
+    "lastLiquibaseTimestamp": 1631160001000
   }
 }

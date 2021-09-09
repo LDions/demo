@@ -1,0 +1,29 @@
+{
+  "name": "RoleAuthority",
+  "fields": [
+    {
+      "fieldName": "roleId",
+      "fieldType": "Long",
+      "javadoc": "角色id",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "authorityId",
+      "fieldType": "Long",
+      "javadoc": "权限id",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "javadoc": "@note authority - 角色-权限中间表\\n@author",
+  "entityTableName": "role_authority",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210909040001"
+}
