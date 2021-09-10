@@ -1,13 +1,12 @@
 package com.hzy.mydemo.modules.login.security;
 
+import com.hzy.mydemo.modules.basic.repository.UsersRepository;
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
 import java.util.*;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,9 +23,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class DomainUserDetailsService implements UserDetailsService {
 
     private final UserRepository userRepository;
+    private final UsersRepository usersRepository;
 
-    public DomainUserDetailsService(UserRepository userRepository) {
+    public DomainUserDetailsService(UserRepository userRepository, UsersRepository usersRepository) {
         this.userRepository = userRepository;
+        this.usersRepository = usersRepository;
     }
 
     /*

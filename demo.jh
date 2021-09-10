@@ -6,7 +6,7 @@
  * @note authority - 用户表
  * @author
  */
-entity User{
+entity Users{
     createdBy          String maxlength(64) required          /** 创建人 */
     createdTime        Instant required                       /** 创建时间 */
     updatedBy          String maxlength(64)                   /** 更新人 */

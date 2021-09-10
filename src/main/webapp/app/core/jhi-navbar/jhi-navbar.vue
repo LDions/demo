@@ -29,6 +29,30 @@
             <font-awesome-icon icon="th-list" />
             <span class="no-bold">Entities</span>
           </span>
+          <b-dropdown-item to="/accounts">
+            <font-awesome-icon icon="asterisk" />
+            <span>Accounts</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/role">
+            <font-awesome-icon icon="asterisk" />
+            <span>Role</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/sys-authority">
+            <font-awesome-icon icon="asterisk" />
+            <span>Sys Authority</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/user-role">
+            <font-awesome-icon icon="asterisk" />
+            <span>User Role</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/role-authority">
+            <font-awesome-icon icon="asterisk" />
+            <span>Role Authority</span>
+          </b-dropdown-item>
+          <b-dropdown-item to="/users">
+            <font-awesome-icon icon="asterisk" />
+            <span>Users</span>
+          </b-dropdown-item>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
         <b-nav-item-dropdown

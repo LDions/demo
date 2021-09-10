@@ -22,6 +22,12 @@ import '../content/scss/vendor.scss';
 import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
+import AccountsService from '@/entities/accounts/accounts.service';
+import RoleService from '@/entities/role/role.service';
+import SysAuthorityService from '@/entities/sys-authority/sys-authority.service';
+import UserRoleService from '@/entities/user-role/user-role.service';
+import RoleAuthorityService from '@/entities/role-authority/role-authority.service';
+import UsersService from '@/entities/users/users.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -73,6 +79,12 @@ new Vue({
     userService: () => new UserManagementService(),
 
     userOAuth2Service: () => new UserOAuth2Service(),
+    accountsService: () => new AccountsService(),
+    roleService: () => new RoleService(),
+    sysAuthorityService: () => new SysAuthorityService(),
+    userRoleService: () => new UserRoleService(),
+    roleAuthorityService: () => new RoleAuthorityService(),
+    usersService: () => new UsersService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

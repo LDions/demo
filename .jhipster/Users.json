@@ -1,0 +1,123 @@
+{
+  "name": "Users",
+  "fields": [
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String",
+      "javadoc": "创建人",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "createdTime",
+      "fieldType": "Instant",
+      "javadoc": "创建时间",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String",
+      "javadoc": "更新人",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "updatedTime",
+      "fieldType": "Instant",
+      "javadoc": "更新时间"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean",
+      "javadoc": "是否逻辑删除",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "javadoc": "姓名",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "fieldName": "sex",
+      "fieldType": "String",
+      "javadoc": "性别",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "32"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "javadoc": "密码",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "512"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String",
+      "javadoc": "用户状态 0正常，1禁用",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "32"
+    },
+    {
+      "fieldName": "avatar",
+      "fieldType": "String",
+      "javadoc": "头像",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    },
+    {
+      "fieldName": "resetCode",
+      "fieldType": "String",
+      "javadoc": "重置码",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "resetTime",
+      "fieldType": "Instant",
+      "javadoc": "重置时间"
+    },
+    {
+      "fieldName": "userCode",
+      "fieldType": "String",
+      "javadoc": "用户编码",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "javadoc": "手机号",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "11"
+    },
+    {
+      "fieldName": "activate",
+      "fieldType": "String",
+      "javadoc": "激活码",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "64"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "javadoc": "邮箱",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "320"
+    }
+  ],
+  "relationships": [],
+  "javadoc": "@note authority - 用户表\\n@author",
+  "entityTableName": "users",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210910014611"
+}
