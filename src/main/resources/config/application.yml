@@ -101,7 +101,7 @@ spring:
       hibernate.query.fail_on_pagination_over_collection_fetch: true
       hibernate.query.in_clause_parameter_padding: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update #creare:每次运行项目，没有表格会新建，表中数据会清空  create-drop:每次程序结束时会清空表  update:每次运行程序，没有表格就会新建，表中数据不会清空只会更新  validate:运行程序会校验数据与数据库字段类型是否相同，不同会报错  none：默认值，每次启动项目不会对数据库做任何验证和操作
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
