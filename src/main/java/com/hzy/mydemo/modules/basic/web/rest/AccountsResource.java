@@ -2,7 +2,7 @@ package com.hzy.mydemo.modules.basic.web.rest;
 
 import com.hzy.mydemo.modules.basic.domain.Accounts;
 import com.hzy.mydemo.modules.basic.repository.AccountsRepository;
-import com.hzy.mydemo.modules.firstversion.rest.errors.BadRequestAlertException;
+import com.hzy.mydemo.modules.common.exception.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -153,8 +153,8 @@ public class AccountsResource {
                     if (accounts.getAccessToken() != null) {
                         existingAccounts.setAccessToken(accounts.getAccessToken());
                     }
-                    if (accounts.getUserid() != null) {
-                        existingAccounts.setUserid(accounts.getUserid());
+                    if (accounts.getUserId() != null) {
+                        existingAccounts.setUserId(accounts.getUserId());
                     }
 
                     return existingAccounts;

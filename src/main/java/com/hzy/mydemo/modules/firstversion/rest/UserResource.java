@@ -1,11 +1,11 @@
 package com.hzy.mydemo.modules.firstversion.rest;
 
 import com.hzy.mydemo.config.Constants;
+import com.hzy.mydemo.modules.common.exception.BadRequestAlertException;
+import com.hzy.mydemo.modules.common.exception.EmailAlreadyUsedException;
+import com.hzy.mydemo.modules.common.exception.LoginAlreadyUsedException;
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
-import com.hzy.mydemo.modules.firstversion.rest.errors.BadRequestAlertException;
-import com.hzy.mydemo.modules.firstversion.rest.errors.EmailAlreadyUsedException;
-import com.hzy.mydemo.modules.firstversion.rest.errors.LoginAlreadyUsedException;
 import com.hzy.mydemo.modules.firstversion.service.MailService;
 import com.hzy.mydemo.modules.firstversion.service.UserService;
 import com.hzy.mydemo.modules.firstversion.service.dto.AdminUserDTO;

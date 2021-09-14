@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import tech.jhipster.web.util.ResponseUtil;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/users")
 @Transactional
 public class UsersResource {
 
@@ -20,12 +20,13 @@ public class UsersResource {
         this.usersRepository = usersRepository;
     }
 
-    @GetMapping("/users/list")
-    public List<Users> getAllUsers() {
-        return usersRepository.findAll();
+    @GetMapping("/list")
+    public String getAllUsers() {
+        String info = "user information";
+        return info;
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/info/{id}")
     public ResponseEntity<Users> getUsers(@PathVariable Long id) {
         Optional<Users> users = usersRepository.findById(id);
         return ResponseUtil.wrapOrNotFound(users);

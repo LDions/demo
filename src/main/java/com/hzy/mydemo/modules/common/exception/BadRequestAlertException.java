@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.firstversion.rest.errors;
+package com.hzy.mydemo.modules.common.exception;
 
 import java.net.URI;
 import java.util.HashMap;
@@ -13,6 +13,10 @@ public class BadRequestAlertException extends AbstractThrowableProblem {
     private final String entityName;
 
     private final String errorKey;
+
+    public BadRequestAlertException(String defaultMessage) {
+        this(defaultMessage, "", "");
+    }
 
     public BadRequestAlertException(String defaultMessage, String entityName, String errorKey) {
         this(ErrorConstants.DEFAULT_TYPE, defaultMessage, entityName, errorKey);

@@ -36,7 +36,7 @@ entity Accounts{
     deleted            Boolean required                       /** 是否逻辑删除 */
     categories         String maxlength(32) required          /** 账号类别 登录账号，手机号，微信，QQ */
     code               String maxlength(64)                   /** 账号 */
-    openId             String maxlength(64) required          /** openid */
+    openId             String maxlength(64) required          /** openid 账号 */
     accessToken        String maxlength(64) required          /** token */
     userId             Long required                          /** 用户ID */
 }

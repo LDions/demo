@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.firstversion.rest.errors;
+package com.hzy.mydemo.modules.common.exception;
 
 public class EmailAlreadyUsedException extends BadRequestAlertException {
 

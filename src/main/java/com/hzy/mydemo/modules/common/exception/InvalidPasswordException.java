@@ -1,4 +1,4 @@
-package com.hzy.mydemo.modules.firstversion.rest.errors;
+package com.hzy.mydemo.modules.common.exception;
 
 import org.zalando.problem.AbstractThrowableProblem;
 import org.zalando.problem.Status;

@@ -1,10 +1,10 @@
 package com.hzy.mydemo.modules.firstversion.rest;
 
+import com.hzy.mydemo.modules.common.exception.EmailAlreadyUsedException;
+import com.hzy.mydemo.modules.common.exception.InvalidPasswordException;
+import com.hzy.mydemo.modules.common.exception.LoginAlreadyUsedException;
 import com.hzy.mydemo.modules.firstversion.domain.User;
 import com.hzy.mydemo.modules.firstversion.repository.UserRepository;
-import com.hzy.mydemo.modules.firstversion.rest.errors.EmailAlreadyUsedException;
-import com.hzy.mydemo.modules.firstversion.rest.errors.InvalidPasswordException;
-import com.hzy.mydemo.modules.firstversion.rest.errors.LoginAlreadyUsedException;
 import com.hzy.mydemo.modules.firstversion.rest.vm.KeyAndPasswordVM;
 import com.hzy.mydemo.modules.firstversion.rest.vm.ManagedUserVM;
 import com.hzy.mydemo.modules.firstversion.service.MailService;

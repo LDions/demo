@@ -1,5 +1,6 @@
 package com.hzy.mydemo.modules.firstversion.rest.errors;
 
+import com.hzy.mydemo.modules.common.exception.*;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collection;
