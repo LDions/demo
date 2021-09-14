@@ -1,5 +1,6 @@
 package com.hzy.mydemo.modules.login.security.jwt;
 
+import com.hzy.mydemo.modules.login.security.UserModel;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -24,6 +25,7 @@ public class TokenProvider {
     private final Logger log = LoggerFactory.getLogger(TokenProvider.class);
 
     private static final String AUTHORITIES_KEY = "auth";
+    private static final String CURRENTUSER_KEY = "cur";
 
     private final Key key;
 
@@ -53,8 +55,25 @@ public class TokenProvider {
             1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSecondsForRememberMe();
     }
 
+    //    public static void main(String[] args) {
+    //
+    //        Map<String, Object> map = new HashMap<>();
+    //        map.put("name","cc");
+    //        map.put("phone","15044042528");
+    //         String jwt=Jwts
+    //            .builder()
+    //            .setSubject("title") //代表这个JWT的主体，即它的所有人，这个是一个json格式的字符串，可以存放什么userid，roldid之类的，作为什么用户的唯一标志。
+    //            .claim(AUTHORITIES_KEY, map) //声明自定义属性
+    //            .signWith(Keys.secretKeyFor(SignatureAlgorithm.HS256))
+    //            .compact();
+    //         System.out.println(jwt);
+    //    }
+
+    /*
+     *创建token
+     */
     public String createToken(Authentication authentication, boolean rememberMe) {
-        String authorities = authentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.joining(","));
+        UserModel userModel = (UserModel) authentication.getPrincipal();
 
         long now = (new Date()).getTime();
         Date validity;
@@ -63,16 +82,39 @@ public class TokenProvider {
         } else {
             validity = new Date(now + this.tokenValidityInMilliseconds);
         }
-
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", userModel.getId());
+        map.put("name", userModel.getName());
+        map.put("phone", userModel.getPhone());
         return Jwts
             .builder()
-            .setSubject(authentication.getName())
-            .claim(AUTHORITIES_KEY, authorities)
-            .signWith(key, SignatureAlgorithm.HS512)
-            .setExpiration(validity)
-            .compact();
+            .setSubject(authentication.getName()) //代表这个JWT的主体，即它的所有人，这个是一个json格式的字符串，可以存放什么userid，roldid之类的，作为什么用户的唯一标志。
+            .claim(AUTHORITIES_KEY, map) //声明自定义属性
+            .signWith(key, SignatureAlgorithm.HS512) //设置签名使用的签名算法和签名使用的私钥
+            .setExpiration(validity) //设置过期时间
+            .compact(); //将其压缩成最终string形式,生成最终的jws
+        //        String authorities = authentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.joining(","));
+        //
+        //        long now = (new Date()).getTime();
+        //        Date validity;
+        //        if (rememberMe) {
+        //            validity = new Date(now + this.tokenValidityInMillisecondsForRememberMe);
+        //        } else {
+        //            validity = new Date(now + this.tokenValidityInMilliseconds);
+        //        }
+        //
+        //        return Jwts
+        //            .builder()
+        //            .setSubject(authentication.getName())
+        //            .claim(AUTHORITIES_KEY, authorities)
+        //            .signWith(key, SignatureAlgorithm.HS512)
+        //            .setExpiration(validity)
+        //            .compact();
     }
 
+    /*
+     *解析token
+     */
     public Authentication getAuthentication(String token) {
         Claims claims = jwtParser.parseClaimsJws(token).getBody();
 
@@ -87,6 +129,9 @@ public class TokenProvider {
         return new UsernamePasswordAuthenticationToken(principal, token, authorities);
     }
 
+    /*
+     *验证token
+     */
     public boolean validateToken(String authToken) {
         try {
             jwtParser.parseClaimsJws(authToken);

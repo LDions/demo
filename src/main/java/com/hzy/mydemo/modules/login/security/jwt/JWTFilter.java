@@ -28,17 +28,26 @@ public class JWTFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
         throws IOException, ServletException {
+        //拿到Authorization请求头的信息，获取token
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+        //调用方法获取头中token
         String jwt = resolveToken(httpServletRequest);
+        //验证token
         if (StringUtils.hasText(jwt) && this.tokenProvider.validateToken(jwt)) {
             Authentication authentication = this.tokenProvider.getAuthentication(jwt);
+            //将验证过的authentication放入上下文对象中
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
+    /*
+     *从请求头中获取token的方法
+     */
     private String resolveToken(HttpServletRequest request) {
+        //取出header中的authorization
         String bearerToken = request.getHeader(AUTHORIZATION_HEADER);
+        //判断一下内容是否为空 是否为Bearer开头 ，然后去掉前缀，拿到真正的token
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
             return bearerToken.substring(7);
         }

@@ -11,5 +11,9 @@ public final class AuthoritiesConstants {
 
     public static final String ANONYMOUS = "ROLE_ANONYMOUS";
 
+    public static final String CATEGORY_LOGIN = "登录账号";
+
+    public static final String STATE_NORMAL = "正常";
+
     private AuthoritiesConstants() {}
 }

@@ -19,7 +19,10 @@ public class JWTConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilt
      */
     @Override
     public void configure(HttpSecurity http) {
+        //当返回了这个token那如何实现下次请求其他APi的时候按照JWT的标准带上这个token进行验证呢？
+        // 前面说过Security是通过一层层的filter处理web请求的，我们也需要加一个JWTfilter，并把它加入过滤器链中
         JWTFilter customFilter = new JWTFilter(tokenProvider);
+        //这里就是把JWtfilter加进去
         http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }

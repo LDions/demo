@@ -38,7 +38,7 @@ entity Accounts{
     code               String maxlength(64)                   /** 账号 */
     openId             String maxlength(64) required          /** openid */
     accessToken        String maxlength(64) required          /** token */
-    userid             Long required                          /** 用户ID */
+    userId             Long required                          /** 用户ID */
 }
 /**
  * @note authority - 角色表

@@ -101,8 +101,8 @@ public class Accounts implements Serializable {
      */
     @NotNull
     @ApiModelProperty(value = "用户ID", required = true)
-    @Column(name = "userid", nullable = false)
-    private Long userid;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -235,17 +235,17 @@ public class Accounts implements Serializable {
         this.accessToken = accessToken;
     }
 
-    public Long getUserid() {
-        return this.userid;
+    public Long getUserId() {
+        return this.userId;
     }
 
-    public Accounts userid(Long userid) {
-        this.userid = userid;
+    public Accounts userId(Long userId) {
+        this.userId = userId;
         return this;
     }
 
-    public void setUserid(Long userid) {
-        this.userid = userid;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -281,7 +281,7 @@ public class Accounts implements Serializable {
             ", code='" + getCode() + "'" +
             ", openId='" + getOpenId() + "'" +
             ", accessToken='" + getAccessToken() + "'" +
-            ", userid=" + getUserid() +
+            ", userid=" + getUserId() +
             "}";
     }
 }
