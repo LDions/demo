@@ -14,5 +14,3 @@ misc: 一些未归类或不知道将它归类到什么方面的提交
     scope：用于说明此次代码提交影响的范围
     subject：是对于该commit目的的简短描述
     issue_id：bug序号
-
-
