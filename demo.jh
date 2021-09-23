@@ -81,3 +81,10 @@ entity RoleAuthority{
     roleId             Long required                          /** 角色id */
     authorityId        Long required                          /** 权限id */
 }
+/** 用户验证码表 */
+entity VerificationCode {
+  phone                String                                 /** 手机号 */
+  code                 String                                 /** 验证码 */
+  time                 Instant                                /** 创建时间 */
+  enable               Boolean                                /** 是否可用 */
+}

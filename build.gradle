@@ -290,6 +290,11 @@ dependencies { //依赖的坐标集合
     // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
     implementation 'com.querydsl:querydsl-jpa:5.0.0'
 
+    //阿里发送短信的工具类中使用到
+    implementation group: 'com.aliyun', name: 'aliyun-java-sdk-core', version: '4.5.18'
+    //腾讯短信服务
+    implementation group: 'com.github.qcloudsms', name: 'qcloudsms', version: '1.0.6'
+
 
 }
 
