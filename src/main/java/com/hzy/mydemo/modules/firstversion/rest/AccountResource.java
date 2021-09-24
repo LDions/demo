@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * REST controller for managing the current user's account.
  */
+@Deprecated //表示此方法已废弃、暂时可用，但以后此类或方法都不会再更新、后期可能会删除，建议后来人不要调用此方法。
 @RestController
 @RequestMapping("/api")
 public class AccountResource {
