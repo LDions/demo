@@ -16,7 +16,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 public class RedisConfiguration {
 
     @Autowired
-    RedisConnectionFactory redisConnectionFactory;
+    public final RedisConnectionFactory redisConnectionFactory;
 
     public RedisConfiguration(RedisConnectionFactory redisConnectionFactory) {
         this.redisConnectionFactory = redisConnectionFactory;
