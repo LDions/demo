@@ -11,5 +11,8 @@ public final class Constants {
     public static final String SYSTEM = "system";
     public static final String DEFAULT_LANGUAGE = "zh-cn";
 
+    //接口分类
+    public static final String VERIFICATION = "验证码";
+
     private Constants() {}
 }

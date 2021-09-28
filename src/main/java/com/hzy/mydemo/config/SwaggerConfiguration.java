@@ -30,7 +30,8 @@ public class SwaggerConfiguration { //配置swagger的启用配置文件，支�
      * 新添加的包(不包含common中的)放在这里，
      * 下面的逻辑会根据路由中携带的信息判断是小程序还是后台！！！
      */
-    private static final String HZY_PACKAGE = "com.hzy.mydemo.modules.basic.web.rest";
+    private static final String HZY_PACKAGE =
+        "com.hzy.mydemo.modules.basic.web.rest" + SPLITOR + "com.hzy.mydemo.modules.verification.rest";
 
     /**
      * 给接口分组

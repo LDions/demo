@@ -42,7 +42,7 @@
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "languages": ["en", "fr"],
-    "entities": ["Accounts", "Role", "SysAuthority", "UserRole", "RoleAuthority", "Users"],
-    "lastLiquibaseTimestamp": 1631238371000
+    "entities": ["Accounts", "Role", "SysAuthority", "UserRole", "RoleAuthority", "Users", "VerificationCode"],
+    "lastLiquibaseTimestamp": 1632623404000
   }
 }

@@ -1,0 +1,37 @@
+{
+  "name": "VerificationCode",
+  "fields": [
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "javadoc": "手机号"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "javadoc": "验证码"
+    },
+    {
+      "fieldName": "time",
+      "fieldType": "Instant",
+      "javadoc": "创建时间"
+    },
+    {
+      "fieldName": "enable",
+      "fieldType": "Boolean",
+      "javadoc": "是否可用"
+    }
+  ],
+  "relationships": [],
+  "javadoc": "用户验证码表",
+  "entityTableName": "verification_code",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210926023004"
+}
