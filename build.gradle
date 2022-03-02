@@ -1,3 +1,4 @@
+//maven项目转gradle 在maven项目根目录下运行gradle inti --type pom
 buildscript { //这里是gradle脚本执行所需依赖，分别是对应的maven库和插件
     //buildscript中的声明是gradle脚本自身需要使用的资源。可以声明的资源包括依赖项、第三方插件、maven仓库地址等。
     // 而在build.gradle文件中直接声明的依赖项、仓库地址等信息是项目自身需要的资源。gradle在执行脚本时，会优先执行buildscript代码块中的内容，然后才会执行剩余的build脚本
@@ -18,7 +19,7 @@ plugins { //插件配置；格式为id «plugin id» version «plugin version» 
     id "jacoco"
     id "org.springframework.boot"
     id "com.google.cloud.tools.jib"
-    id "com.gorylenko.gradle-git-properties"
+    id "com.gorylenko.gradle-git-properties" version "2.4.0"//版本匹配
     id "com.github.node-gradle.node"
 //    id "org.liquibase.gradle"
     id "org.sonarqube"
@@ -229,7 +230,8 @@ dependencies { //依赖的坐标集合
 //    liquibaseRuntime sourceSets.main.compileClasspath
     implementation "org.springframework.boot:spring-boot-loader-tools"
     implementation "org.springframework.boot:spring-boot-starter-mail"
-    implementation "org.springframework.boot:spring-boot-starter-logging" //日志依赖，一般不用直接添加，spring-boot-starter中其中就包含了这个，该依赖的内容就是spring boot默认的日志框架
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    //日志依赖，一般不用直接添加，spring-boot-starter中其中就包含了这个，该依赖的内容就是spring boot默认的日志框架
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation 'org.projectlombok:lombok:1.18.18'  //@Slf4j注解导入
@@ -240,7 +242,7 @@ dependencies { //依赖的坐标集合
 //    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
     testImplementation "org.testcontainers:mysql"
     implementation "org.springframework.boot:spring-boot-starter-security"
-    implementation ("org.springframework.boot:spring-boot-starter-web") {
+    implementation("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
     }
     implementation "org.springframework.boot:spring-boot-starter-undertow"
@@ -263,8 +265,8 @@ dependencies { //依赖的坐标集合
         implementation "io.jsonwebtoken:jjwt-impl"
         implementation "io.jsonwebtoken:jjwt-jackson"
     }
-    implementation ("io.springfox:springfox-oas")
-    implementation ("io.springfox:springfox-swagger2")
+    implementation("io.springfox:springfox-oas")
+    implementation("io.springfox:springfox-swagger2")
     implementation "io.springfox:springfox-bean-validators"
     implementation "mysql:mysql-connector-java"
 //    liquibaseRuntime "mysql:mysql-connector-java"
